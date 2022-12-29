@@ -17,6 +17,20 @@ class UserService {
         val body: List<User>? = usersResponse.body()
     }
 
+    fun successfulExampleResponse() {
+        val usersResponse = userApi.getResponse()
+            .execute()
+
+        val successful = usersResponse.isSuccessful
+        val httpStatusCode = usersResponse.code()
+        val httpStatusMessage = usersResponse.message()
+
+        val body: ExampleResponse? = usersResponse.body()
+
+        println(body)
+    }
+
+
     fun errorUsersResponse() {
         val usersResponse = userApi.getUsers()
             .execute()

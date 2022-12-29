@@ -6,9 +6,8 @@ import retrofit2.converter.jackson.JacksonConverterFactory
 import java.util.*
 
 object RetrofitClient {
-
     // Base URL must end in /
-    private const val BASE_URL = "http://localhost:8090/v1/"
+    private const val BASE_URL = "https://api.coindesk.com/v1/"
 
     private val okHttpClient = OkHttpClient()
         .newBuilder()

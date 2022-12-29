@@ -6,6 +6,9 @@ interface UserApi {
     @GET("users")
     fun getUsers(): Call<List<User>>
 
+    @GET("bpi/currentprice.json")
+    fun getResponse(): Call<ExampleResponse>
+
     // Works exactly the same, as above
     @HTTP(method = "GET", path = "users")
     fun httpUsers(): Call<List<User>>
